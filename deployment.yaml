@@ -16,7 +16,7 @@ spec:
         image: gitlab/gitlab-ce
         env:
           - name: GITLAB_OMNIBUS_CONFIG
-            value: "external_url 'http://gitlab-service.default/';gitlab_rails['registry_enabled'] = true;gitlab_rails['registry_api_url'] = \"http://172.17.0.2:5000\";gitlab_rails['initial_root_password'] = 'adminadmin'"
+            value: "gitlab_rails['registry_enabled'] = true;gitlab_rails['registry_api_url'] = \"http://172.17.0.2:5000\";gitlab_rails['initial_root_password'] = 'adminadmin'"
         ports:
         - containerPort: 80
           name: http
